@@ -4,11 +4,54 @@ author: "Elizabeth Marge"
 date: "2/14/2021"
 output: word_document
 ---
+
 ## Question 1 
+
 
 ```{r}
 
+library(tidyverse)
 
+
+```
+
+
+```{r}
+
+USArrests
+
+## The type of information that is shown within the USArrests dataset is there are rows for all 50 states in the United States. For the columns, this includes murder, assault, urbanpop, and rape variables that are evaulated for each state. 
+
+```
+
+## Question 2 
+
+```{r}
+
+map_dbl(USArrests$Assault, max)
+
+## North Carolina has the largest number of assaults. 
+
+```
+
+
+## Question 3
+
+```{r}
+
+library(nycflights13)
+flights
+
+```
+
+## Question 4
+
+```{r}
+
+nrow(flights)
+ncol(flights)
+
+## Describe a tibble (two or three sentences). Now use and show R code that verifies that flights is a tibble
 
 ```
 
