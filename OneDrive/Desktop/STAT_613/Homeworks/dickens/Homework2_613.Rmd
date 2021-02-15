@@ -2,7 +2,7 @@
 title: "Homework2_613"
 author: "Elizabeth Marge"
 date: "2/14/2021"
-output: rmarkdown::github_document
+output: github_document
 
 ---
 
