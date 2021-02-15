@@ -2,8 +2,10 @@
 title: "Homework2_613"
 author: "Elizabeth Marge"
 date: "2/14/2021"
-output: word_document
+output: rmarkdown::github_document
+
 ---
+
 
 ## Question 1 
 
