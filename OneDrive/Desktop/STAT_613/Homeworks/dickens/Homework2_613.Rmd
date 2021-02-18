@@ -2,7 +2,7 @@
 title: "Homework2_613"
 author: "Elizabeth Marge"
 date: "2/14/2021"
-output: github_document
+output: word_document
 
 ---
 
@@ -53,7 +53,107 @@ flights
 nrow(flights)
 ncol(flights)
 
-## Describe a tibble (two or three sentences). Now use and show R code that verifies that flights is a tibble
+```
+
+```{r}
+
+## Tibbles do not change variable names or types, and show more frequent errors when a variable does not exists. This forces a tibble to have cleaner and a more expressive structure. In addition, tibbles have an enhanced print() function that makes it easier to utilize with large datasets that can contain complex objects. 
+
+is_tibble(flights)
+
+```
+## Question 5
+
+```{r}
+
+typeof(ncol(flights))
+
+
+```
+
+## Question 6
+
+```{r}
+
+as_tibble(iris)
+
+```
+
+
+```{r}
+
+## Response- sepal.length
+## Predictor - sepal.width (you are predicting length making it the y variable )
+
+sepal <- lm(Sepal.Length~Sepal.Width, iris)
+sepal
+
+```
+
+```{r}
+
+models1 <- iris %>%
+  split(.$Species) %>%
+  map(~lm(Sepal.Length~Sepal.Width, data = .))
+models1
+
+```
+
+
+## Question 7
+
+```{r}
+
+V <- list(12, 22, 27, 31.5, NA, 39, "east")
+V
+
+```
+
+## 7A- 
+
+```{r}
+
+length(c(12, 22, 27, 31.5, NA, 39, "east"))
+
+```
+
+## 7B
+
+```{r}
+
+V[is.na(V)]
+
+```
+
+
+## 7c
+
+```{r}
+
+V[3]
+
+
+```
+
+
+## 7D
+
+```{r}
+
+
+str(V[c(1,7)])
+
+
+```
+
+
+## 7E
+
+
+```{r}
+
+
+typeof("east")
 
 ```
 
