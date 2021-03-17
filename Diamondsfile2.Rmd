@@ -1,0 +1,15 @@
+---
+title: "Diamonds2"
+author: "Elizabeth Marge"
+date: "3/17/2021"
+output: word_document
+---
+
+```{r}
+
+library(tidyverse)
+library(dplyr)
+diamonds%>%
+ select(price, color, x)
+
+```
